@@ -12,8 +12,17 @@ int main()
     std::cout << 82; //sta³a ca³kowitoliczbowa
     std::cout << '\n';
     std::cout << -2.5; //sta³a rzeczywista 
+    std::cout << "pierwsza dana " << 254 << " kolejny tekst\n";
 }
 
+int main()
+{
+
+
+
+
+
+}
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
