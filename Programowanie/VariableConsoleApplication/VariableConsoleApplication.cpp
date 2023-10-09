@@ -138,6 +138,7 @@ void task9()
 	std::cout << "Podaj drug¹ wysokoœæ trapezu\n";
 	std::cin >> height;
 
+
 }
 
 
