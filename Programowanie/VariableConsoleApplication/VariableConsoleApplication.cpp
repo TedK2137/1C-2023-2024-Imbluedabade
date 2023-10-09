@@ -81,15 +81,59 @@ void task5()
 
 }
 
+//Program obliczaj¹cy wartoœæ wyra¿enia a ^ 2 + b ^ 2
+void task6()
+{
+    int a, b, x;
+    std::cout << "Podaj liczbê a\n";
+    std::cin >> a;
+    std::cout << "Podaj liczbê b\n";
+    std::cin >> b;
+
+    x = a*a + b*b;
+    std::cout << "Wartoœæ wyra¿enia to = " << x << "\n";
 
 
 
+}
+
+//Program obliczaj¹cy pole trójk¹ta o podstawie b i wysokoœci h
+void task7()
+{
+    int base, height, Area;
+    std::cout << "Podaj podstawê trójk¹ta\n";
+    std::cin >> base;
+    std::cout << "Podaj wysokoœæ trójk¹ta\n";
+    std::cin >> height;
+
+    Area = base * height / 2;
+    std::cout << "Pole trójk¹ta wynosi = " << Area << "\n";
 
 
 
+}
+
+//Program obliczaj¹cy objêtoœæ kuli o promieniu r
+void task8()
+{
+    double Radius, Volume;
+    std::cout << "Podaj promieñ kuli \n";
+    std::cin >> Radius;
+    
+    Volume = 4.0 / 3.0 * 3.14 * Radius * Radius * Radius;
+    std::cout << "Objêtoœæ kuli wynosi = " << Volume << "\n";
+      
+
+}
+
+//Program obliczaj¹cy pole trapezu o podstawach a i b oraz wysokoœci h
+
+void task9()
+{
+   
 
 
-
+}
 
 
 int main()
@@ -100,15 +144,19 @@ int main()
     //task3();
     //task4();
     //task5();
-    task6();
+    //task6();
+    //task7();
+    //task8();
+    task9();
+
 }   
 
 /* Zadania
-*. Program obliczaj¹cy pole prostok¹ta.
-*. Program obliczaj¹cy objêtoœæ sto¿ka.
-*. Program obliczaj¹cy pole ko³a.
-*. Program obliczaj¹cy wartoœæ wyra¿enia a^2 + b^2
-*. Program obliczaj¹cy pole trójk¹ta o podstawie b i wysokoœci h
+*.  Program obliczaj¹cy pole prostok¹ta.
+*.  Program obliczaj¹cy objêtoœæ sto¿ka.
+*.  Program obliczaj¹cy pole ko³a.
+*.  Program obliczaj¹cy wartoœæ wyra¿enia a^2 + b^2
+*.  Program obliczaj¹cy pole trójk¹ta o podstawie b i wysokoœci h
 *. Program obliczaj¹cy objêtoœæ kuli o promieniu r
 *. Program obliczaj¹cy pole trapezu o podstawach a i b oraz wysokoœci h
 *. Program obliczaj¹cy œredni¹ wa¿on¹ trzech liczb z podanymi odpowiednimi wagami w1, w2 i w3.
