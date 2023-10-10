@@ -130,13 +130,15 @@ void task8()
 
 void task9()
 {
-	double BaseUno, BaseDos
+	double BaseUno, BaseDos, Height;
 	std::cout << "Podaj podstawê trapezu\n";
-	std::cin >> base;
+	std::cin >> BaseUno;
 	std::cout << "Podaj drug¹ podstawê trapezu\n";
-	std::cin >> height;
-	std::cout << "Podaj drug¹ wysokoœæ trapezu\n";
-	std::cin >> height;
+	std::cin >> BaseDos;
+	std::cout << "Podaj wysokoœæ trapezu\n";
+	std::cin >> Height;
+
+
 
 
 
@@ -154,7 +156,7 @@ int main()
 	//task6();
 	//task7();
 	//task8();
-	task9();
+	//task9();
 
 }
 
@@ -164,8 +166,8 @@ int main()
 *.  Program obliczaj¹cy pole ko³a.
 *.  Program obliczaj¹cy wartoœæ wyra¿enia a^2 + b^2
 *.  Program obliczaj¹cy pole trójk¹ta o podstawie b i wysokoœci h
-*. Program obliczaj¹cy objêtoœæ kuli o promieniu r
-*. Program obliczaj¹cy pole trapezu o podstawach a i b oraz wysokoœci h
+*.	Program obliczaj¹cy objêtoœæ kuli o promieniu r
+*.	Program obliczaj¹cy pole trapezu o podstawach a i b oraz wysokoœci h
 *. Program obliczaj¹cy œredni¹ wa¿on¹ trzech liczb z podanymi odpowiednimi wagami w1, w2 i w3.
 *. Stwórz program, który pobiera od u¿ytkownika d³ugoœæ w metrach i przelicza j¹ na centymetry i milimetry, wyœwietlaj¹c wynik.
 *. Napisz program, który konwertuje wprowadzon¹ kwotê w jednej walucie na inn¹, korzystaj¹c z okreœlonego kursu wymiany.
