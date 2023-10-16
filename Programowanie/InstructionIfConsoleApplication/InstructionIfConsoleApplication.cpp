@@ -18,9 +18,25 @@ void task()
 
 }
 
+void task1()
+{
+	int NumeroUsuario;
+	std::cout << "Podaj liczbe:\n";
+	std::cin >> NumeroUsuario;
+	if (NumeroUsuario % 2 == 0) // NumeroUsuario != 0
+		std::cout << "Liczba jest parzysta";
+	else
+		std::cout << "Liczba jest nieparzysta";
+
+
+
+}
+
+
 int main()
 {
-	task();
+	//task();
+	task1();
 }
 
 
