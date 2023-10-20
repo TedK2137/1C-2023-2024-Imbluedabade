@@ -99,12 +99,47 @@ void task3()
 
 }
 
+//Napisz program, który poprosi u¿ytkownika o podanie dwóch liczb ca³kowitych i sprawdzi, czy s¹ one równe.Wyœwietl odpowiedni komunikat.
+void task4()
+{
+	int NumeroUno, NumeroDos;
+	std::cout << "Podaj liczbe:\n";
+	std::cin >> NumeroUno;
+	std::cout << "Podaj liczbe:\n";
+	std::cin >> NumeroDos;
+
+	if (NumeroUno == NumeroDos)
+		std::cout << "Liczby s¹ równe ";
+	else
+		std::cout << "Liczby nie s¹ równe ";
+	
+
+}
+
+//Napisz program, który poprosi u¿ytkownika o podanie wieku i sprawdzi, czy osoba jest pe³noletnia.Wyœwietl odpowiedni komunikat.
+void task5()
+{
+	int edad;
+	std::cout << "Podaj swój wiek:\n";
+	std::cin >> edad;
+
+	if (edad >= 18)
+		std::cout << "Jesteœ pe³noletni";
+	else
+		std::cout << "No piwo for you";
+	
+
+}
+
 int main()
 {
+	setlocale(LC_CTYPE, "Polish");
 	//task();
 	//task1();
 	//task2();
-	task3();
+	//task3();
+	//task4();
+	task5();
 
 }
 
@@ -132,8 +167,8 @@ Operatory logiczne:
  T - true
 */
 /*
-*. Napisz program, który poprosi u¿ytkownika o podanie dwóch liczb ca³kowitych i sprawdzi, czy s¹ one równe. Wyœwietl odpowiedni komunikat.
-*. Napisz program, który poprosi u¿ytkownika o podanie wieku i sprawdzi, czy osoba jest pe³noletnia. Wyœwietl odpowiedni komunikat.
+*.
+*. 
 *. Napisz program, który poprosi u¿ytkownika o podanie liczby ca³kowitej i obliczy jej wartoœæ bezwzglêdn¹. Wyœwietl wynik.
 *. Napisz program, który poprosi u¿ytkownika o podanie liczby od 1 do 7 i wyœwietli odpowiadaj¹cy mu dzieñ tygodnia.
 *. Napisz program, który poprosi u¿ytkownika o podanie dwóch liczb ca³kowitych i wyœwietli wiêksz¹ z nich.
@@ -144,6 +179,6 @@ Na podstawie tych danych oblicz wskaŸnik BMI (Body Mass Index) i wyœwietl odpowi
 *. Napisz program, który poprosi u¿ytkownika o podanie d³ugoœci trzech odcinków i sprawdzi, czy mo¿na zbudowaæ z nich trójk¹t. Wyœwietl odpowiedni komunikat.
 *. Napisz program, który poprosi u¿ytkownika o podanie liczby dodatniej i obliczy jej pierwiastek kwadratowy, jeœli jest to mo¿liwe. Wyœwietl wynik lub odpowiedni komunikat, jeœli liczba jest ujemna.
 *. Program sprawdzaj¹cy czy podana data jest poprawna (np. sprawdzaj¹c, czy dzieñ jest z zakresu od 1 do 31, miesi¹c od 1 do 12 itd.)
-*.
+*/
 
 
