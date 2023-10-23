@@ -92,7 +92,7 @@ void task3()
 	if (NumeroDos != 0)
 	{
 		int cociente = NumeroUno / NumeroDos;
-			std::cout << "Wynik dzielenia " << cociente << "\n";
+		std::cout << "Wynik dzielenia " << cociente << "\n";
 	}
 	else
 		std::cout << "Dzielenie przez zero!!1!1!!11\n";
@@ -112,7 +112,7 @@ void task4()
 		std::cout << "Liczby s¹ równe ";
 	else
 		std::cout << "Liczby nie s¹ równe ";
-	
+
 
 }
 
@@ -127,7 +127,57 @@ void task5()
 		std::cout << "Jesteœ pe³noletni";
 	else
 		std::cout << "No piwo for you";
+
+
+}
+
+//Napisz program, który poprosi u¿ytkownika o podanie liczby ca³kowitej i obliczy jej wartoœæ bezwzglêdn¹.Wyœwietl wynik.
+void task6()
+{
+	int entero;
+	std::cout << "Podaj liczbê ca³kowit¹:\n";
+	std::cin >> entero;
+
+	if (entero >= 0)
+		std::cout << "Wartoœæ bezwzglêdna liczby = " << entero << "\n";
+	else
+		std::cout << "Wartoœæ bezwzglêdna liczby = " << entero * (-1);
+
+}
+
+//Napisz program, który poprosi u¿ytkownika o podanie liczby od 1 do 7 i wyœwietli odpowiadaj¹cy mu dzieñ tygodnia.
+void task7()
+{
+	int	diaDeLaSemana;
+	std::cout << "Podaj liczbê od 1 do 7 \n";
+	std::cin >> diaDeLaSemana;
+
+	if (diaDeLaSemana == 1)
+		std::cout << "Poniedzia³ek";
 	
+	if (diaDeLaSemana == 2)
+		std::cout << "Wtorek";
+	
+	if (diaDeLaSemana == 3)
+		std::cout << "Œroda";
+	
+	if (diaDeLaSemana == 4)
+		std::cout << "Czwartek";
+	
+	if (diaDeLaSemana == 5)
+		std::cout << "Pi¹tek";
+	
+	if (diaDeLaSemana == 6)
+		std::cout << "Sobota";
+	
+	if (diaDeLaSemana == 7)
+		std::cout << "Niedziela";
+	
+	if (diaDeLaSemana <= 0)
+		std::cout << "B³êdna liczba";
+	
+	if (diaDeLaSemana > 7)
+		std::cout << "B³êdna liczba";
 
 }
 
@@ -139,7 +189,10 @@ int main()
 	//task2();
 	//task3();
 	//task4();
-	task5();
+	//task5();
+	//task6();
+	task7();
+
 
 }
 
@@ -168,8 +221,8 @@ Operatory logiczne:
 */
 /*
 *.
-*. 
-*. Napisz program, który poprosi u¿ytkownika o podanie liczby ca³kowitej i obliczy jej wartoœæ bezwzglêdn¹. Wyœwietl wynik.
+*.
+*.
 *. Napisz program, który poprosi u¿ytkownika o podanie liczby od 1 do 7 i wyœwietli odpowiadaj¹cy mu dzieñ tygodnia.
 *. Napisz program, który poprosi u¿ytkownika o podanie dwóch liczb ca³kowitych i wyœwietli wiêksz¹ z nich.
 *. Napisz program, który poprosi u¿ytkownika o podanie roku i sprawdzi, czy jest to rok przestêpny. Wyœwietl odpowiedni komunikat.
