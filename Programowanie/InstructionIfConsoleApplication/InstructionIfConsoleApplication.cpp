@@ -181,6 +181,43 @@ void task7()
 
 }
 
+//Napisz program, który poprosi u¿ytkownika o podanie dwóch liczb ca³kowitych i wyœwietli wiêksz¹ z nich.
+void task8()
+{
+	int NumeroUno, NumeroDos ;
+	std::cout << "Podaj pierwsz¹ lcizbê ca³kowit¹\n";
+	std::cin >> NumeroUno;
+	std::cout << "Podaj drug¹ lcizbê ca³kowit¹\n";
+	std::cin >> NumeroDos;
+
+	if (NumeroUno > NumeroDos)
+		std::cout << NumeroUno;
+	else
+		std::cout << NumeroDos;
+
+
+}
+
+void task14()
+{
+	int day, month, year;
+	std::cout << "Podaj dzieñ";
+	std::cin >> day;
+	std::cout << "Podaj miesi¹c";
+	std::cin >> month;
+	std::cout << "Podaj rok";
+	std::cin >> year;
+
+	if ( (day > 0 && day =< 31) 
+		&& month > 0 && month <=12
+		
+		&& (day < 31 (month == 4 || month == 6 || month == 9 || month ==))
+		&& month > 0 && month =< 12  )
+		std::cout << "siuu";
+}
+
+
+
 int main()
 {
 	setlocale(LC_CTYPE, "Polish");
@@ -191,9 +228,9 @@ int main()
 	//task4();
 	//task5();
 	//task6();
-	task7();
-
-
+	//task7();
+	//task8();
+	//task14();
 }
 
 
@@ -223,8 +260,8 @@ Operatory logiczne:
 *.
 *.
 *.
-*. Napisz program, który poprosi u¿ytkownika o podanie liczby od 1 do 7 i wyœwietli odpowiadaj¹cy mu dzieñ tygodnia.
-*. Napisz program, który poprosi u¿ytkownika o podanie dwóch liczb ca³kowitych i wyœwietli wiêksz¹ z nich.
+*. 
+*. 
 *. Napisz program, który poprosi u¿ytkownika o podanie roku i sprawdzi, czy jest to rok przestêpny. Wyœwietl odpowiedni komunikat.
 *. Napisz program, który poprosi u¿ytkownika o podanie liczby ca³kowitej i sprawdzi, czy jest ona podzielna zarówno przez 3, jak i przez 5. Wyœwietl odpowiedni komunikat.
 *. Napisz program, który poprosi u¿ytkownika o podanie masy cia³a (w kilogramach) i wzrostu (w metrach).
