@@ -77,5 +77,5 @@ int main()
 {
 	setlocale(LC_CTYPE, "Polish");
 	//task2();
-	task3();
+	task3(); 
 }
