@@ -68,7 +68,9 @@ void task3()
 	do
 	{
 		std::cout << currentNumber << ", ";
-		currentNumber = (currentNumber + 1);
+		//currentNumber += 1;
+		//currentNumber++;
+		++currentNumber;
 	} while (upperRange >= currentNumber);
 
 }
