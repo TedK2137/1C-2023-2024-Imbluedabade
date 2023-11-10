@@ -72,12 +72,27 @@ void task3()
 		//currentNumber++;
 		++currentNumber;
 	} while (upperRange >= currentNumber);
+}
 
+void task4()
+{
+	int liczba, wynik = 0;
+	std::cout << "Podaj liczbe: ";
+	std::cin >> liczba;
+
+
+	while (liczba != 0)
+	{
+		wynik += liczba % 10;
+		liczba /= 10;
+	}
+	std::cout << wynik;
 }
 
 int main()
 {
 	setlocale(LC_CTYPE, "Polish");
 	//task2();
-	task3(); 
+	//task3(); 
+	task4();
 }
