@@ -89,10 +89,70 @@ void task4()
 	std::cout << wynik;
 }
 
+void task5()
+{
+	int number;
+	int sum = 0;
+	int numberOfNumbers = 0;
+
+	/*
+	std::cout << "Podaj liczbê:\n";
+	std::cin >> number;
+	sum = sum + number;
+	numberOfNumbers++;
+	if (number != 0)
+	{
+		std::cout << "Podaj liczbê:\n";
+		std::cin >> number;
+		sum = sum + number;
+		numberOfNumbers++;
+		if (number != 0)
+		{
+			std::cout << "Podaj liczbê:\n";
+			std::cin >> number;
+			sum = sum + number;
+			numberOfNumbers++;
+			//if ...
+		}
+	}
+	*/
+
+	do
+	{
+		std::cout << "Podaj liczbê:\n";
+		std::cin >> number;
+		sum = sum + number;
+		//if (number != 0)
+		numberOfNumbers++;
+	} while (number != 0);
+
+	//numberOfNumbers--;
+	std::cout << "Suma liczb wynosi " << sum << "\n";
+	double avg = sum * 1.0 / numberOfNumbers;
+	std::cout << "Œrednia " << avg << "\n";
+}
+
+void task6()
+{
+	int liczba, wynik = 0;
+	std::cout << "Podaj liczbe: ";
+	std::cin >> liczba;
+
+
+	while (liczba != 0)
+	{
+		wynik++;
+		liczba /= 10;
+	}
+	std::cout << wynik;
+}
+
 int main()
 {
 	setlocale(LC_CTYPE, "Polish");
 	//task2();
 	//task3(); 
-	task4();
+	//task4();
+	//task5();
+	task6();
 }
