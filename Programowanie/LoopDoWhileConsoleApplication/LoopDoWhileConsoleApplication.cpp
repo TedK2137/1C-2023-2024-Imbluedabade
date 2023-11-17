@@ -3,6 +3,7 @@
 
 //Napisz program, który ma pobraæ od u¿ytkownika liczbê dodatni¹. 
 //Zabezpiecz program przed pobieraniem liczb ujemnych.
+
 void task1()
 {
 	int numberFromUser;
