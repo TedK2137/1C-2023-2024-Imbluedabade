@@ -26,6 +26,7 @@ void task1()
 
 
 
+
 int main()
 {
     setlocale(LC_CTYPE, "Polish");
