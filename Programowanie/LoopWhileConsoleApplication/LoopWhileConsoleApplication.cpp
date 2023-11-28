@@ -19,6 +19,32 @@ void task1()
     std::cout << "Nwd wynosi: " << nwd;
 }
 
+void task2()
+{
+    
+    int dividend = 2, nwd = 1;
+    int tmpNumeroUno, tmpNumeroSecundo;
+
+    std::cout << "Podaj ae liczbê:\n";
+    std::cin >> tmpNumeroUno;
+    std::cout << "Podaj ae drug¹ liczbê:\n";
+    std::cin >> tmpNumeroSecundo;
+
+    while (tmpNumeroUno >= dividend
+        && tmpNumeroSecundo >= dividend)
+    {
+        if (tmpNumeroUno % dividend == 0
+            && tmpNumeroSecundo % dividend == 0)
+        {
+            tmpNumeroUno = tmpNumeroUno / dividend;
+            tmpNumeroSecundo = tmpNumeroSecundo / dividend;
+        }
+        else
+            dividend++;
+    }
+    std::cout << "NWD wynosi: " << nwd << "\n";
+}
+
 
 
 
@@ -30,5 +56,6 @@ void task1()
 int main()
 {
     setlocale(LC_CTYPE, "Polish");
-    task1();
+    //task1();
+    task2();
 }
