@@ -83,6 +83,6 @@ int main()
 {
     setlocale(LC_CTYPE, "Polish");
     //task1();
-    //task2();
-    taska3();
+    task2();
+    
 }
