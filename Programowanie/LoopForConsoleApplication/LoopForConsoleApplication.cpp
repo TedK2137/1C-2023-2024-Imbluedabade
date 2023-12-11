@@ -124,8 +124,17 @@ void task4()
 		std::cout << "Liczba nie jest doskonała\n";
 }
 
-*Program wyświetlający na ekranie kwadraty liczb od 1 do 10 (np. 1, 4, 9, 16 itd.)
+//Program wyświetlający na ekranie kwadraty liczb od 1 do 10 (np. 1, 4, 9, 16 itd.)
 void task5()
+{
+	for (int i = 1; i < 11; i++)
+	{
+		std::cout << i << " * " << i << " = " << i * i << "\n";
+	}
+}
+
+//Program obliczający n!
+
 
 int main()
 {
