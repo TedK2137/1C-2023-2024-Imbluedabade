@@ -136,6 +136,7 @@ void task5()
 //Program obliczający n!
 
 
+
 int main()
 {
 	task5();
