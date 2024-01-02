@@ -101,14 +101,12 @@ void task6()
 }
 
 //Poproœ u¿ytkownika o wprowadzenie liczby ca³kowitej w systemie dziesiêtnym. Nastêpnie skonwertuj tê liczbê na system dwójkowy (binarny) i wyœwietl wynik.
-void task6()
+void task7()
 {
-			
-
 }
 
 int main()
 {
 	setlocale(LC_CTYPE, "Polish");
-	task6();
+	task7();
 }
