@@ -33,7 +33,21 @@ void task2()
 
     srand(time(0));
 
-    std::cout
+    std::cout << "wylosowane liczby:\n";
+    for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+        numbers[i] = rand() % (UPPER_RANGE - LOWER_RANGE + 1) + LOWER_RANGE;
+        std::cout << numbers[i] << ", ";
+    }
+    std::cout << "\n";
+    //----------------------------------------------------------------------------
+    int sum = 0;
+    for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+        sum = sum + numbers[i];
+    }
+    double avg = sum * 1.0 / ARRAY_SIZE;
+    std::cout << "Œrednia wynosi: " << avg << "\n";
 
 }
 
