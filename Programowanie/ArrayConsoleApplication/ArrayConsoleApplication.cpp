@@ -51,54 +51,43 @@ void task2()
 
 }
 
-//Napisz program, który wyznaczy wszystkie liczby pierwsze od 2 do zadeklarowanego zakresu. Metoda sito Eratostenesa.
-void task4()
+
+// Napisz program, który posortuje tablicê liczb sposobem przez wybór.
+void task6()
 {
-	const long long UPPER_RANGE = 70;
-	const long long UPPER_RANGE = 1000000;
+	const short LOWER_RANGE = 0;
+	const short UPPER_RANGE = 70;
 
-	//wersja 1
+	const unsigned short ARRAY_SIZE = 10;
+	int numbers[ARRAY_SIZE];
 
-	for (long long numberToCheck = 2; numberToCheck <= UPPER_RANGE; numberToCheck++)
+	srand(time(0));
+
+	std::cout << "wylosowane liczby:\n";
+	for (int i = 0; i < ARRAY_SIZE; i++)
 	{
-		bool isPrime = true;
-		for (long long i = 2; i <= numberToCheck / 2; i++)
-		{
-			if (numberToCheck % i == 0)
-			{
-				isPrime = false;
-				break;
-			}
-		}
-
-		if (isPrime /*== true*/)
-			if (isPrime)
-				std::cout << numberToCheck << ", ";
+		numbers[i] = rand() % (UPPER_RANGE - LOWER_RANGE + 1) + LOWER_RANGE;
+		std::cout << numbers[i] << ", ";
 	}
-	std::cout << "Gotowe\n";
 	std::cout << "\n";
+	//----------------------------------------------------------------------------
 
-	//wersja 2
-	bool sieveOfEratosthenes[UPPER_RANGE + 1];
-
-	for (unsigned long long i = 2; i <= UPPER_RANGE; i++)
+	for (int i = 1; i < ARRAY_SIZE; i++)
 	{
-		sieveOfEratosthenes[i] = true;
-	}
+		int pom = numbers[1];
 
-	for (unsigned long long number = 2; number <= UPPER_RANGE; number++)
-	{
-		if (sieveOfEratosthenes[number] /*== true*/)
+		int j;
+		for (int j = i - 1; j >= 0 && numbers[j] > pom; j--)
 		{
-			for (long long numberToCrossOut = number + number; numberToCrossOut <= UPPER_RANGE; numberToCrossOut = numberToCrossOut + number)
-				sieveOfEratosthenes[numberToCrossOut] = false;
+			numbers[j + 1] - numbers[j];
 		}
+		numbers[j + 1] = pom;
 	}
 
-	for (unsigned long long i = 2; i <= UPPER_RANGE; i++)
+	std::cout << "Posortowane liczby:\n";
+	for (int i = 0; i < ARRAY_SIZE; i++)
 	{
-		if (sieveOfEratosthenes[i] /*== true*/)
-			std::cout << i << ", ";
+		std::cout << numbers[i] << ", ";
 	}
 	std::cout << "\n";
 }
@@ -106,6 +95,6 @@ void task4()
 int main()
 {
     setlocale(LC_CTYPE, "polish");
-    task1();
-	task4();
+    //task1();
+	task6();
 }
