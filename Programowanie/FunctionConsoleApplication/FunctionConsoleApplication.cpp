@@ -39,7 +39,7 @@ void task6_GetNumber(int& number)
     std::cout << "Podaj liczbê:\n";
     std::cin >> number;
 }
- 
+
 int main()
 {
     /*
@@ -64,6 +64,7 @@ int main()
     //std::cout << "zmienna number w funkcji main: " << number << "\n";
     //task5(number);
     //std::cout << "zmienna number w funkcji main: " << number << "\n";
+
 
 }
 
