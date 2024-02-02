@@ -39,7 +39,7 @@ void task6_GetNumber(int& number)
     std::cout << "Podaj liczbê:\n";
     std::cin >> number;
 }
-
+ 
 int main()
 {
     /*
