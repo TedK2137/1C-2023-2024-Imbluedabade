@@ -34,6 +34,12 @@ void task5(int &number)
     std::cout << "zmienna number w funkcji task5: " << number << "\n";
 }
 
+void task6_GetNumber(int& number)
+{
+    std::cout << "Podaj liczbê:\n";
+    std::cin >> number;
+}
+
 int main()
 {
     /*
@@ -46,18 +52,18 @@ int main()
     task3("Jan", 35);
     task3("Ala", 17);
     */
-    int number = 5;
+    //int number = 5;
     /*std::cout << "zmienna number w funkcji main: " << number << "\n";
     task4(number);
     std::cout << "zmienna number w funkcji main: " << number << "\n";
 
     task4(9);*/
-    const int NUMBER = 9;
+    //const int NUMBER = 9;
     //task4(NUMBER);
 
-    std::cout << "zmienna number w funkcji main: " << number << "\n";
-    task5(number);
-    std::cout << "zmienna number w funkcji main: " << number << "\n"
+    //std::cout << "zmienna number w funkcji main: " << number << "\n";
+    //task5(number);
+    //std::cout << "zmienna number w funkcji main: " << number << "\n";
 
 }
 
