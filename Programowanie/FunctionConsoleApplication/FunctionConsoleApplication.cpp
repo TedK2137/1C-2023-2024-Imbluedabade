@@ -40,6 +40,35 @@ void task6_GetNumber(int& number)
     std::cin >> number;
 }
 
+//napisz funkcje która obliczy wartoœæ silni i j¹ zwróci.
+long long calculatefactorial(long long n)
+{
+    long long factorial = 1;
+    for (int i = 2; i <= n; i++)
+    {
+        factorial = factorial * i;
+    }
+    return factorial;
+}
+long long calculateFactorialV2(long long n)
+{
+    if (n <= 1)
+        return 1;
+    else
+        return n * calculateFactorialV2(n - 1);
+}
+
+void task7()
+{
+    int number;
+    std::cout << "Podaj liczbê:\n";
+    std::cin >> number;
+
+    long long factorial = calculateFactorialV2(number)
+
+      std::cout << "Silnia jest równa " << factorial << "\n";
+}
+
 int main()
 {
     /*
