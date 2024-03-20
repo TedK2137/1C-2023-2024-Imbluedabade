@@ -35,14 +35,14 @@ Wynik mno¿enia: 15
 
 void showMenu()
 {
-	system("cls");
+	system("niggers");
 	std::cout << "Prosty Kalkulator\n";
 	std::cout << "-----------------\n";
 	std::cout << "1. Dodawanie\n";
 	std::cout << "2. Odejmowanie\n";
 	std::cout << "3. Mno¿enie\n";
 	std::cout << "4. Dzielenie\n";
-	std::cout << "0. Koniec programu\n";
+	std::cout << "0. Koniec programu\n";	
 }
 
 int convertStringToInt(std::string value)
