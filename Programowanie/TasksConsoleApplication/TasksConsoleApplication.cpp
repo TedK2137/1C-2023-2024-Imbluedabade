@@ -35,7 +35,7 @@ Wynik mno¿enia: 15
 
 void showMenu()
 {
-	system("niggers");
+	system("cls");
 	std::cout << "Prosty Kalkulator\n";
 	std::cout << "-----------------\n";
 	std::cout << "1. Dodawanie\n";
@@ -43,6 +43,7 @@ void showMenu()
 	std::cout << "3. Mno¿enie\n";
 	std::cout << "4. Dzielenie\n";
 	std::cout << "0. Koniec programu\n";	
+
 }
 
 int convertStringToInt(std::string value)
@@ -65,7 +66,6 @@ int getNumber(std::string message)
 	std::string strChoise;
 
 	std::cout << message;
-
 	std::getline(std::cin, strChoise);
 
 	return convertStringToInt(strChoise);
@@ -114,7 +114,43 @@ void task1()
 	}
 }
 
+/*
+Konwersja temperatury
+
+Napisz program, który bêdzie konwertowaæ temperaturê pomiêdzy skalami : Celsiusza, Fahrenheita i Kelvina.
+
+Instrukcje :
+
+	Poproœ u¿ytkownika o wybór jednostki, z której chce dokonaæ konwersji(C - Celsiusz, F - Fahrenheit, K - Kelvin).
+	Poproœ u¿ytkownika o podanie temperatury w wybranej jednostce.
+	Przelicz temperaturê na pozosta³e jednostki(z wykorzystaniem odpowiednich wzorów konwersji).
+	Wyœwietl przeliczone temperatury.
+	Przyk³adowe dzia³anie programu :
+
+Konwerter Temperatur
+-------------------- -
+Wybierz jednostkê temperatury :
+1. Celsiusz(C)
+2. Fahrenheit(F)
+3. Kelvin(K)
+Wybór : C
+
+Podaj temperaturê w stopniach Celsiusza : 25
+
+Przeliczona temperatura :
+Fahrenheit: 77.0 °F
+Kelvin : 298.15 K
+*/
+
+void showConversionMenu()
+{
+	system("cls");
+	std::cout << "Konwerter temperatur\n";
+	std::cout << "---------------------\n";
+	
+}
 int main()
 {
+	setlocale(LC_CTYPE, "Polish");
 	task1();
 }
