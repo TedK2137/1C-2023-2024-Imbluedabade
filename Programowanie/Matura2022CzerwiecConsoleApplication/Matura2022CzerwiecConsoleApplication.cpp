@@ -55,7 +55,7 @@ void zadanie4_2() {
     file.close();
 }
 
-// Zadanie 4.3
+// zadanie 4.3
 void zadanie4_3() {
     std::ifstream file("liczby.txt");
     int number;
