@@ -20,8 +20,15 @@ Console.WriteLine($"Druga liczba to {secondNumber}");
 //-------------------------------------------------------------------------------------------------------------------------
 
 //przekazywanie przez wartość
-
 void ParametrTest_v1(int p)
+{
+    Console.WriteLine($"Parametr w parametrTest_v1 {p}");
+    p++;
+    Console.WriteLine($"Parametr w parametrTest_v1 {p}");
+}
+
+//przekazywanie przez referencję
+void ParametrTest_v2(ref int p)
 {
     Console.WriteLine($"Parametr w parametrTest_v1 {p}");
     p++;
@@ -32,4 +39,11 @@ firstNumber = 15;
 Console.WriteLine($"firstNumber przed {firstNumber}");
 ParametrTest_v1(firstNumber);
 Console.WriteLine($"firstNumber po {firstNumber}");
+
+firstNumber = 15;
+Console.WriteLine($"firstNumber przed {firstNumber}");
+ParametrTest_v2(ref firstNumber);
+Console.WriteLine($"firstNumber po {firstNumber}");
+
+
 
