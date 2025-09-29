@@ -1,26 +1,23 @@
-﻿using System.Drawing;
+﻿
+using AboutObjectConsoleApp;
 
-namespace AboutObjectConsoleApp;
+Point firstPoint = new Point();
 
-internal class Program
-{
-    private int x;
-    private int y;
+Point secondPoint = new Point(5, 9);
 
-    public Point()
-    {
-        x = 5;
-        y = 8;
-    }
+firstPoint = new Point(18, -7);
+firstPoint = new(18, -7);
 
-    public Point(int a, int b)
-    {
-        x = a;
-        y = b;
-    }
+firstPoint.Show();
 
-    public void Show()
-    {
-               Console.WriteLine($"x = {x}, y = {y}");
-    }
-}
+int a;
+//firstPoint.x = 99;
+firstPoint.SetX(99);
+firstPoint.X = 99;
+
+//a = firstPoint.x;
+a = firstPoint.GetX();
+a = firstPoint.X;
+
+Point3D point3D = new(5, 7, 9);
+point3D.Show();
