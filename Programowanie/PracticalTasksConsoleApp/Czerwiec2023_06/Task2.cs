@@ -60,7 +60,7 @@ namespace PracticalTasksConsoleApp.Czerwiec2023_06
             }
         }
 
-        public void Task()
+        public static void Task()
         {
             Film film = new Film();
             Console.WriteLine("Początkowy tytuł: " + film.PobierzTytul());

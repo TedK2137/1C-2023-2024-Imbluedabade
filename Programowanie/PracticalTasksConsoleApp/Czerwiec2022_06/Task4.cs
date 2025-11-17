@@ -33,7 +33,7 @@ namespace PracticalTasksConsoleApp.Czerwiec2022_06
             this.id = nextOsoba.id;
             this.name = nextOsoba.name;
         }
-        public void writeName(string argument)
+        public void WriteName(string argument)
         {
             if (string.IsNullOrEmpty(argument) || string.IsNullOrEmpty(name))
             {
@@ -61,9 +61,9 @@ namespace PracticalTasksConsoleApp.Czerwiec2022_06
             Osoba osoba2 = new Osoba(id, name);
             Osoba osoba3 = new Osoba(osoba2);
 
-            osoba1.writeName("Jan");
-            osoba2.writeName("Jan");
-            osoba3.writeName("Jan");
+            osoba1.WriteName("Jan");
+            osoba2.WriteName("Jan");
+            osoba3.WriteName("Jan");
 
             Console.WriteLine($"Liczba zarejestrowanych osób: {Osoba.classInstancesCount}");
         }

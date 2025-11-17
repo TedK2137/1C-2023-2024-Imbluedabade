@@ -15,7 +15,7 @@ namespace PracticalTasksConsoleApp.Styczen2025_1
          zwracany typ i opis:   <brak>
          autor:                 <101110>
         ********************************************************************/
-        public void displayMessage(string message)
+        public void DisplayMessage(string message)
         {
             Console.WriteLine(""+message);
         }
@@ -24,17 +24,17 @@ namespace PracticalTasksConsoleApp.Styczen2025_1
     {
         private int washingProgram = 0;
 
-        public int setWashingProgram(int washingProgram)
+        public int SetWashingProgram(int washingProgram)
         {
             if (washingProgram < 1 || washingProgram > 12)
             {
-                displayMessage("Podano niepoprawny numer programu");
+                DisplayMessage("Podano niepoprawny numer programu");
                 this.washingProgram = 0;
             }
             else
             {
                 this.washingProgram = washingProgram;
-                displayMessage("Program został ustawiony");
+                DisplayMessage("Program został ustawiony");
             }
             return this.washingProgram;
         }
@@ -48,7 +48,7 @@ namespace PracticalTasksConsoleApp.Styczen2025_1
             if (vacuumStatus == false)
             {
                 vacuumStatus = true;
-                displayMessage("Odkurzacz włączono");
+                DisplayMessage("Odkurzacz włączono");
             }
         }
 
@@ -57,11 +57,11 @@ namespace PracticalTasksConsoleApp.Styczen2025_1
             if (vacuumStatus == true)
             {
                 vacuumStatus = false;
-                displayMessage("Odkurzacz wyłączono");
+                DisplayMessage("Odkurzacz wyłączono");
             }
             else
             {
-                displayMessage("Odkurzacz jest już wyłączony");
+                DisplayMessage("Odkurzacz jest już wyłączony");
             }
         }
     }
@@ -73,13 +73,13 @@ namespace PracticalTasksConsoleApp.Styczen2025_1
             Vacuum vacuum = new Vacuum();
 
             Console.WriteLine("Podaj numer programu prania (1-12): ");
-            washingMashine.setWashingProgram(int.Parse(Console.ReadLine()));
+            washingMashine.SetWashingProgram(int.Parse(Console.ReadLine()));
 
             vacuum.On();
             vacuum.On();
             vacuum.On();
 
-            vacuum.displayMessage("Odkurzacz wyładował się");
+            vacuum.DisplayMessage("Odkurzacz wyładował się");
 
             vacuum.Off();
         }
