@@ -67,6 +67,5 @@ namespace PracticalTasksConsoleApp.Czerwiec2022_06
 
             Console.WriteLine($"Liczba zarejestrowanych osób: {Osoba.classInstancesCount}");
         }
-
     }
 }
