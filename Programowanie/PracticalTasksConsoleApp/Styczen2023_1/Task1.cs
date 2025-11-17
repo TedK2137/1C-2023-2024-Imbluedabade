@@ -8,7 +8,7 @@ namespace PracticalTasksConsoleApp.Styczen2023_1
 {
     internal class Task1
     {
-        public void Task()
+        public static void Task()
         {
             Console.WriteLine("Wprowadź liczbę a:");
             int a = int.Parse(Console.ReadLine());
