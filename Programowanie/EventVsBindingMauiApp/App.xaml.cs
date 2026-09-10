@@ -13,5 +13,5 @@ namespace EventVsBindingMauiApp
         {
             return new Window(new AppShell());
         }
-    }
+    } 
 }
