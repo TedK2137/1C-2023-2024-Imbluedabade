@@ -1,24 +1,26 @@
-﻿namespace EventVsBindingMauiApp
+﻿
+namespace EventVsBindingMauiApp
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
 
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object? sender, EventArgs e)
+        private void Slider_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            /*Slider slider = sender as Slider;
+            if (rotationLabel is not null
+                && slider is not null)*/
+            //Slider slider = sender as Slider;
+            if (rotationLabel is not null
+                && sender is Slider slider)
+            {
+                rotationLabel.Rotation = slider.Value;
+                rotationLabel.Text = slider.Value.ToString();
+            }
         }
     }
 }
