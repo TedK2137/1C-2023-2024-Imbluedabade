@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="HotelBookingMauiApp.MainPage"
+    Title="Hotel Booking"
+    BackgroundColor="#303030">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="12">
+
+            <Label Text="HOTEL BOOKING"
+                   FontSize="25"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="White" />
+
+            <Label Text="Imię i nazwisko" TextColor="White" />
+            <Entry Text="{Binding GuestName}"
+                   Placeholder="Wprowadź dane klienta" />
+
+            <Label Text="Adres e-mail" TextColor="White" />
+            <Entry Text="{Binding ContactAddress}"
+                   Keyboard="Email"
+                   Placeholder="Wprowadź adres e-mail" />
+
+            <Label Text="Data przyjazdu" TextColor="White" />
+            <DatePicker Date="{Binding CheckIn}"
+                        MinimumDate="{Binding TodayDate}"
+                        Format="dd.MM.yyyy" />
+
+            <Label Text="Liczba nocy" TextColor="White" />
+            <HorizontalStackLayout Spacing="15">
+                <Stepper Minimum="1"
+                         Maximum="14"
+                         Increment="1"
+                         Value="{Binding StayLength}" />
+                <Label Text="{Binding StayLength}"
+                       VerticalOptions="Center"
+                       TextColor="White"
+                       FontSize="18" />
+            </HorizontalStackLayout>
+
+            <Label Text="Liczba osób" TextColor="White" />
+            <HorizontalStackLayout Spacing="15">
+                <Stepper Minimum="1"
+                         Maximum="4"
+                         Increment="1"
+                         Value="{Binding GuestCount}" />
+                <Label Text="{Binding GuestCount}"
+                       VerticalOptions="Center"
+                       TextColor="White"
+                       FontSize="18" />
+            </HorizontalStackLayout>
+
+            <Label Text="Rodzaj pokoju" TextColor="White" />
+            <Picker Title="Wybierz pokój"
+                    ItemsSource="{Binding RoomTypes}"
+                    SelectedItem="{Binding RoomChoice}" />
+
+            <Label Text="Śniadanie: 40 zł za osobę/noc"
+                   TextColor="White" />
+            <Switch IsToggled="{Binding BreakfastIncluded}" />
+
+            <Label Text="Parking: 30 zł za noc"
+                   TextColor="White" />
+            <CheckBox IsChecked="{Binding ParkingNeeded}" />
+
+            <Label Text="Rabat (%)"
+                   TextColor="White" />
+
+            <Grid ColumnDefinitions="*,Auto"
+                  ColumnSpacing="10">
+
+                <Slider Grid.Column="0"
+                    Minimum="0"
+                    Maximum="100"
+                    Value="{Binding DiscountRate, Mode=TwoWay}"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Center" />
+
+                <Label Grid.Column="1"
+                    Text="{Binding DiscountRate, StringFormat='{0:F0}%'}"
+                    TextColor="White"
+                    VerticalOptions="Center"
+                    WidthRequest="50"
+                    HorizontalTextAlignment="End" />
+
+            </Grid>
+
+            <Button Text="Oblicz koszt"
+                    Command="{Binding CalculateBooking}"
+                    BackgroundColor="#2563EB"
+                    TextColor="White" />
+
+            <Label Text="PODSUMOWANIE REZERWACJI"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="White" />
+
+            <Label Text="{Binding BookingDetails}"
+                   FontSize="16"
+                   TextColor="White" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
