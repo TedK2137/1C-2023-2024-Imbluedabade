@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="VocabularyFlashcardsMauiApp.MainPage"
+    Title="Fiszki do nauki słówek"
+    BackgroundColor="#20232A">
+
+    <VerticalStackLayout
+        Padding="25"
+        Spacing="20"
+        VerticalOptions="Center">
+
+        <Label
+            Text="Fiszki do nauki angielskiego"
+            FontSize="25"
+            FontAttributes="Bold"
+            TextColor="White"
+            HorizontalOptions="Center" />
+
+        <CarouselView
+            x:Name="FlashcardCarousel"
+            ItemsSource="{Binding Flashcards}"
+            Position="{Binding CurrentPosition, Mode=TwoWay}"
+            IndicatorView="FlashcardIndicator"
+            HeightRequest="220">
+
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Border
+                        BackgroundColor="#343840"
+                        Stroke="#555B66"
+                        StrokeThickness="2"
+                        Padding="20"
+                        Margin="5"
+                        StrokeShape="RoundRectangle 15">
+
+                        <Grid>
+                            <Label
+                                Text="{Binding EnglishWord}"
+                                FontSize="36"
+                                FontAttributes="Bold"
+                                TextColor="White"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center" />
+                        </Grid>
+
+                    </Border>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <IndicatorView
+            x:Name="FlashcardIndicator"
+            IndicatorColor="Gray"
+            SelectedIndicatorColor="#3978D4"
+            HorizontalOptions="Center" />
+
+        <Button
+            Text="Pokaż tłumaczenie"
+            Command="{Binding ShowTranslation}"
+            BackgroundColor="#3978D4"
+            TextColor="White"
+            CornerRadius="10" />
+
+        <Label
+            Text="{Binding PolishTranslation}"
+            FontSize="24"
+            FontAttributes="Bold"
+            TextColor="White"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center" />
+
+        <Button
+            Text="Zacznij od początku"
+            Command="{Binding RestartFlashcards}"
+            BackgroundColor="#555B66"
+            TextColor="White"
+            CornerRadius="10" />
+
+    </VerticalStackLayout>
+</ContentPage>

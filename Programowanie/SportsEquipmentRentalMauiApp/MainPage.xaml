@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SportsEquipmentRentalMauiApp.MainPage"
+    Title="Wypożyczalnia sprzętu"
+    BackgroundColor="#20232A">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="25"
+            Spacing="15">
+
+            <Label
+                Text="Wypożyczalnia sprzętu sportowego"
+                FontSize="24"
+                FontAttributes="Bold"
+                TextColor="White"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Wybierz sprzęt:"
+                TextColor="White"
+                FontSize="18" />
+
+            <CollectionView
+                ItemsSource="{Binding EquipmentList}"
+                SelectedItem="{Binding SelectedEquipment, Mode=TwoWay}"
+                SelectionMode="Single"
+                HeightRequest="230">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border
+                            BackgroundColor="#343840"
+                            Stroke="#555B66"
+                            StrokeThickness="1"
+                            Padding="12"
+                            Margin="0,4"
+                            StrokeShape="RoundRectangle 8">
+
+                            <VerticalStackLayout Spacing="5">
+                                <Label
+                                    Text="{Binding Name}"
+                                    TextColor="White"
+                                    FontSize="17"
+                                    FontAttributes="Bold" />
+
+                                <Label
+                                    Text="{Binding DailyPrice, StringFormat='Cena: {0:F2} zł / dzień'}"
+                                    TextColor="LightGray"
+                                    FontSize="14" />
+                            </VerticalStackLayout>
+
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label
+                Text="Imię i nazwisko klienta:"
+                TextColor="White" />
+
+            <Entry
+                Placeholder="Wpisz imię i nazwisko"
+                Text="{Binding CustomerName}"
+                TextColor="White"
+                PlaceholderColor="LightGray"
+                BackgroundColor="#343840" />
+
+            <Label
+                Text="Liczba dni wypożyczenia:"
+                TextColor="White" />
+
+            <Stepper
+                Minimum="1"
+                Maximum="7"
+                Increment="1"
+                Value="{Binding RentalDays, Mode=TwoWay}"
+                HorizontalOptions="Fill" />
+
+            <Label
+                Text="{Binding RentalDays, StringFormat='Wybrana liczba dni: {0:F0}'}"
+                TextColor="White"
+                FontSize="16" />
+
+            <HorizontalStackLayout Spacing="10">
+                <CheckBox
+                    IsChecked="{Binding InsuranceSelected}"
+                    Color="#3978D4" />
+
+                <Label
+                    Text="Ubezpieczenie (5 zł za dzień)"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <Button
+                Text="Oblicz koszt"
+                Command="{Binding CalculateRental}"
+                BackgroundColor="#3978D4"
+                TextColor="White"
+                CornerRadius="10" />
+
+            <Label
+                Text="Podsumowanie wypożyczenia:"
+                FontSize="20"
+                FontAttributes="Bold"
+                TextColor="White" />
+
+            <Label
+                Text="{Binding RentalSummary}"
+                TextColor="White"
+                FontSize="16" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
